@@ -10,6 +10,241 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require normalize
  *= require_tree .
  *= require_self
- */
+*/
+
+html {
+  font-size:16px;
+  height:100%;
+
+  body {
+    background:url("pic1.jpg") center top no-repeat;
+    background-size:cover;
+    font:normal 62.5% 'Helvetica Neue', Tahoma, Arial, sans-serif;
+    height:100%;
+    margin:0;
+  }
+}
+header {
+  background-color:white;
+  max-width:1276px;
+  position:fixed;
+  top:0;
+  left:0;
+  text-align:center;
+  width:100%;
+  ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    max-width:1024px;
+    margin:0 auto;
+    width:100%;
+    li {
+      display:inline-block;
+      vertical-align:top;
+    }
+    li.pull-left {
+      float:left;
+    }
+    li.pull-right {
+      float:right;
+    }
+    a {
+      color:#55acee;
+      display:block;
+      font-size:1.3em;
+      padding:8px 10px;
+      text-decoration:none;
+    }
+  }
+}
+
+.container {
+  color:white;
+  margin:120px auto;
+  max-width:838px;
+  width:100%;
+
+  .introduction {
+    display:inline-block;
+    margin-right:16px;
+    width:(520/838 * 100%);
+    vertical-align:top;
+    
+    h1 {
+      font-size:3.8em;
+      margin:0;
+    }
+    .text {
+      font-size:2.1em;
+      font-weight:300;
+      text-align:left;
+      line-height:31px;
+      width:(470/520 * 100%);
+    }
+
+  }
+
+  .forms {
+    display:inline-block;
+    width:(300/838 * 100%);
+    vertical-align:top;
+    
+    div {
+      background-color:white;
+      border-radius:4px;
+      color:black;
+      display:inline-block;
+      margin-bottom:11px;
+     } 
+
+     form {
+      color:black;
+      display:block;
+      margin: 12px 12px 6px;
+      width:(276/300 * 100%);
+
+      input[type="text"], input[type="password"] {
+        border:1px solid #ccd6dd;
+        border-radius:3px;
+        box-shadow: 0 1px 0 #eee inset, 0 1px 0 #fff;
+        color:#292f33;
+        font-size:1.3em;
+        line-height:20px;
+        margin-bottom:15px;
+        outline:none;
+        padding:4px;
+        width:(266/276 * 100%);
+        &:focus{
+          border:1px solid rgba(112, 188, 114,1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+        }
+      }
+      input[type="submit"] {
+        background-color:#55acee;
+        border:1px solid #3b88c3;
+        border-radius:4px;
+        box-shadow:0 1px 0 #fff;
+        cursor:pointer;
+        color:white;
+        font-size:1.4em;
+        font-weight:bold;
+        height:30px;
+        line-height:11px;
+        margin:0;
+        padding:8px 16px;
+        text-transform:none;
+        width:(101/276 * 100%);
+        &:hover, &:focus {
+          background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.15));
+        }
+      }
+      input[type="password"].medium {
+        display:inline-block;
+        margin-right:5px;
+        margin-bottom:0;
+        vertical-align:top;
+        width:(157/276 * 100%) !important;
+      }
+      .remember-forget {
+        margin-top:4px;
+        margin-bottom:0;
+        width:100%;
+        label {
+          color:#8899a6;
+          cursor:pointer;
+          font-size:1.2em;
+          line-height:20px;
+          text-align:left;
+          text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+          width:(126/276 * 100%);
+          input[type="checkbox"] {
+            border-radius:3px;
+            color:#8899a8;
+            width:(9/126 * 100%);
+            height:13px;
+            &:focus {
+              box-shadow:none;
+              outline:1px dotted #66757f;
+            }
+          }
+        }
+        .seperator {
+          width:(3/276 * 100%);
+          margin-left:2px;
+          margin-right:1px;
+        }
+        a {
+          color:#0084b4;
+          font-size:1.2em;
+          line-height:13px;
+          margin:0;
+          text-decoration:none;
+          text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); 
+          width:(114/276 * 100%);
+          &:active, &:hover, &:focus {
+            text-decoration:underline;
+          }
+        }
+      }
+    }
+    div {
+      h2 {
+        border-bottom: 1px solid #e1e8ed;
+        box-shadow: 0 1px 0 #fff;
+        color: #66757f;
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        line-height:22px;
+        margin:0 0 12px 0;
+        padding: 10px 12px;
+        position: relative;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); 
+        strong {
+          color:#292f33;
+          font-weight:500;
+        }
+      }
+      form.register {
+        margin:0 auto;
+        padding:0;
+        input[type="text"], input[type="password"] {
+          margin:0 0 6px 0; 
+        }
+        input[type="submit"].btn-register {
+          background-color: #ffac33;
+          background-image: linear-gradient(#ffcc4d, #ffac33);
+          border-color: #f1a02a;
+          color: #292f33;
+          float:right;
+          margin-top:0;
+          margin-bottom:13px;
+          text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+          width:(234/300 * 100%);
+          &:hover, &:focus {
+            background-color: #e99110;
+            background-image: linear-gradient(#ffcc4d, #e99110);
+            border-color: #ec8b11;
+            color: #292f33;
+          }
+        }
+      }
+    }
+  }
+    .tweet {
+      font-size:1.4em;
+      width:(520/838 * 100%);
+      p {
+        
+      }
+      .data {
+        font-size:0.9285em;
+        text-decoration:underline;
+
+      }
+    }
+}

@@ -1,2 +1,53 @@
-<a href="/vista">EÍr a la vista.</a>
-<a href="/mi/ruta/es/muy/larga">MUY LARGO</a>
+<header>
+  <nav>
+    <ul>
+      <li class="pull-left"><a href="#">Startseite</a></li>
+      <li class="pull-left"><a href="#">Über uns</a></li>
+      <li class="pull-right"><a href="#"><small>Sprache:</small> Deutsch</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="container">
+  <section class="introduction">
+    <div>
+      <h1>Willkommen bei Twitter!</h1>
+      <p class="text">Verbinde Dich mit Deinen Freunden – und anderen faszinierenden Leuten. Erhalte sofortige Updates zu Dingen, die Dich interessieren. Sieh dabei zu, wie sich Ereignisse entwickeln, in Echtzeit und aus jedem Blickwinkel.</p>
+    </div>
+  </section><!--
+
+  
+  --><section class="forms">
+    <div class="upper-form">
+      <form action="/login" method="post">
+        <input class="mail" type="text" placeholder="E-mail">
+        <input type="password" placeholder="Passwort" class="medium">
+        <input type="submit" value="Anmelden" class="btn-anmelden">
+        <div class="remember-forget">
+          <label for="remember_me">
+            <input type="checkbox" checked="checked" name="remember_me" value="1"> 
+          Angemeldet bleiben
+          </label>
+          <span class="seperator">・</span>
+          <a href="#">Passwort vergessen?</a>
+        </div>
+      </form>
+    </div>
+    <div>
+      <h2><strong>Neu bei Twitter?</strong> Registriere Dich!</h2>
+      <form action="/signup" method="post" class="register">
+        <input type="text" placeholder="Vollständiger Name">
+        <input type="text" placeholder="E-Mail">
+        <input type="password" placeholder="Passwort">
+        <input type="submit" value="Registriere Dich bei Twitter!" class="btn-register">
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="tweet">
+      <p>Sit voluptates eligendi impedit enim tempore, possimus.</p>
+      <p class="data">Tweet und Foto von @anonym</p>
+      <p class="data">11:47 PM - 20 NOV 2014</p>
+    </div>
+  </section>
+</div>
